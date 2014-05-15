@@ -2,6 +2,7 @@
   "name": "broccoli-fingerprint",
   "version": "0.0.1",
   "description": "Fingerprint assets with broccoli",
+  "repository": "https://github.com/moudy/broccoli-fingerprint",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
