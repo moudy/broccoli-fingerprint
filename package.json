@@ -1,6 +1,6 @@
 {
   "name": "broccoli-fingerprint",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Fingerprint assets with broccoli",
   "main": "index.js",
   "scripts": {
