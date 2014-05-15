@@ -1,6 +1,6 @@
 {
   "name": "broccoli-fingerprint",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Fingerprint assets with broccoli",
   "repository": "https://github.com/moudy/broccoli-fingerprint",
   "main": "index.js",
@@ -14,7 +14,7 @@
   "author": "Moudy",
   "license": "MIT",
   "dependencies": {
-    "broccoli-writer": "^0.1.1",
-    "rsvp": "^3.0.6"
+    "broccoli-filter": "^0.1.6",
+    "broccoli-kitchen-sink-helpers": "^0.2.2"
   }
 }

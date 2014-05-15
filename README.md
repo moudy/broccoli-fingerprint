@@ -11,11 +11,13 @@ npm install --save broccoli-fingerprint
 ```
 var fingerprint = require('broccoli-fingerprint');
 var tree = fingerprint(tree, {
-  encoding:'utf8' //defualt
-, separator: '-' // default
+  encoding:'utf8'
+, separator: '-'
+, keepOriginal: true
+, extensions: ['js', 'css']
 });
 
-// Outputs:
+// Example output:
 // <filename>-47f1dd2de35b82f32922850d2eeec45a.js
 ```
 
