@@ -1,0 +1,19 @@
+{
+  "name": "broccoli-fingerprint",
+  "version": "0.0.0",
+  "description": "Fingerprint assets with broccoli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "broccoli-plugin",
+    "fingerprinting"
+  ],
+  "author": "Moudy",
+  "license": "MIT",
+  "dependencies": {
+    "broccoli-writer": "^0.1.1",
+    "rsvp": "^3.0.6"
+  }
+}
