@@ -8,7 +8,7 @@ npm install --save broccoli-fingerprint
 ```
 
 ### Example
-```
+```js
 var fingerprint = require('broccoli-fingerprint');
 var tree = fingerprint(tree, {
   encoding:'utf8'
