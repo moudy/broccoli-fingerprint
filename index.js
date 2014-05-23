@@ -46,9 +46,10 @@ Fingerprint.prototype.getDestFilePath = function(filename) {
     md5.update(file);
     var hex = md5.digest('hex');
 
+    var dirname =  path.dirname(dest);
     var extname =  path.extname(dest);
     var basename =  path.basename(dest, extname);
-    return [basename, hex+extname].join(separator);
+    return dirname + "/" + [basename, hex+extname].join(separator);
   }
 
   var destFilePath = Filter.prototype.getDestFilePath.apply(this, arguments);
