@@ -1,6 +1,6 @@
 {
   "name": "broccoli-fingerprint",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Fingerprint assets with broccoli",
   "repository": "https://github.com/moudy/broccoli-fingerprint",
   "main": "index.js",
