@@ -4,6 +4,10 @@ var crypto = require('crypto');
 var Filter = require('broccoli-filter');
 var helpers = require('broccoli-kitchen-sink-helpers');
 
+var manifest = require('./lib/manifest');
+
+var DEFAULTS = require('./lib/defaults');
+
 Fingerprint.prototype = Object.create(Filter.prototype);
 Fingerprint.prototype.constructor = Fingerprint;
 function Fingerprint (inputTree, options) {
@@ -13,14 +17,14 @@ function Fingerprint (inputTree, options) {
   options = options || {};
 
   if (typeof options.keepOriginal === 'undefined') {
-    this.keepOriginal = true;
+    this.keepOriginal = DEFAULTS.keepOriginal;
   } else {
     this.keepOriginal = options.keepOriginal;
   }
 
-  this.extensions = options.extensions || ['js', 'css'];
-  this.encoding = options.encoding || 'utf8';
-  this.separator = options.separator || '-';
+  this.extensions = options.extensions || DEFAULTS.extensions;
+  this.encoding = options.encoding || DEFAULTS.extensions;
+  this.separator = options.separator || DEFAULTS.separator;
 }
 
 Fingerprint.prototype.processFile = function(srcDir, destDir, relativePath) {
@@ -55,5 +59,7 @@ Fingerprint.prototype.getDestFilePath = function(filename) {
   var destFilePath = Filter.prototype.getDestFilePath.apply(this, arguments);
   if (destFilePath) return fingerprint(destFilePath);
 };
+
+Fingerprint.manifest = manifest;
 
 module.exports = Fingerprint;
