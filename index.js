@@ -40,7 +40,8 @@ Fingerprint.prototype.processString = function(s) {
 };
 
 Fingerprint.prototype.getDestFilePath = function(filename) {
-  var filepath = path.join(this.inputTree.tmpDestDir, filename);
+  var tmpDestDir = this.inputTree.tmpDestDir || this.inputTree.outputPath;
+  var filepath = path.join(tmpDestDir, filename);
   var separator = this.separator;
 
   function fingerprint(dest) {
